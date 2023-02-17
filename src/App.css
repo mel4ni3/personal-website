@@ -1,3 +1,18 @@
+.title {
+  background-image: 
+  url(
+"https://cdn.pixabay.com/photo/2017/06/13/13/51/marble-2398946_960_720.jpg");
+  background-size: "cover";
+  //height: 100vh;
+  //margin-top: -70px;
+  font-size:50px;
+  background-repeat: repeat-y;
+}
+
+body {
+  background-color: lightblue;
+}
+
 .App {
   text-align: center;
 }

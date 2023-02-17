@@ -1,4 +1,25 @@
-import logo from './logo.svg';
+import React, { Component } from "react";
+import ReactDOM from "react-dom/client";
+import './App.css';
+
+class App extends Component {
+  render() {
+    return (
+      <div  className="title">
+      <h1>Melanie Ehrlich</h1>
+      </div>
+    );
+  }
+}
+
+
+export default App;
+
+/*<div className="App">
+      <h1>Hello World!</h1>
+    </div>*/
+
+/*import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -22,4 +43,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;*/
