@@ -26,6 +26,11 @@ class App extends Component {
         </div><div className="resume">
           <h1>Resume</h1>
          <a href="https://mel4ni3.github.io/assets/Melanie_Resume.pdf">Click here to download resume.</a>
+        </div><div className="contact">
+          <h1>Contact</h1>
+         <p>Feel free to reach out to me via email at <a href="mailto:melanie6104@icloud.com">melanie6104@icloud.com,</a> or through <a href="https://www.linkedin.com/in/melanie-ehrlich/">LinkedIn.</a></p>
+        </div><div className="footer">
+         <p>&copy; Melanie Ehrlich</p>
         </div></>
     );
   }
