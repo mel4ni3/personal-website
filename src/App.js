@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 import './App.css';
@@ -9,6 +9,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faJsSquare, faNodeJs, faHtml5, faCss3Alt, faPython } from '@fortawesome/free-brands-svg-icons';
 
 const App = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
+
     const particlesInit = useCallback(async engine => {
         console.log(engine);
         await loadSlim(engine);
@@ -17,6 +19,10 @@ const App = () => {
     const particlesLoaded = useCallback(async container => {
         console.log(container);
     }, []);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
 
     return (
         <>
@@ -138,7 +144,10 @@ const App = () => {
                     zIndex: -1
                 }}
             />
-            <div className="top-bar">
+            <div className="menu-icon" onClick={toggleMenu}>
+                &#9776;
+            </div>
+            <div className={`top-bar ${menuOpen ? 'vertical' : ''}`}>
                 <a href="#home">Home</a>
                 <a href="#projects">Projects</a>
                 <a href="#work-experience">Work Experience</a>
