@@ -253,11 +253,28 @@ body {
 }
 
 .dev-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+  /*width: 150px;
+  height: 150px;*/
+  /* make the width and height have same prorpriotion as the image */
+  width: 20%;
+  height: auto;
+  /*border-radius: 50%;*/
   border: 5px solid white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin: 20px auto;
   display: block;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info p {
+  margin: 0;
 }

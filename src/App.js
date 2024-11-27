@@ -158,7 +158,7 @@ const App = () => {
                 <SocialIcon url="https://instagram.com/melaniie.exe" target="_blank" rel="noopener noreferrer" style={{ margin: 20 }} />
                 <SocialIcon url="https://www.linkedin.com/in/melanie-ehrlich/" target="_blank" rel="noopener noreferrer" style={{ margin: 20 }} />
                 <div className="info">
-                    <img src="https://via.placeholder.com/150" alt="Developer" className="dev-image" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/photo_2024-04-14_22-28-21.jpg`} alt="Developer" className="dev-image" />
                     <p>Hi! I am Melanie Ehrlich, a Computer Science student
                         at the University of Central Florida. Some of my interests
                         include drawing, listening to music, and playing video games. Thanks
@@ -187,7 +187,7 @@ const App = () => {
                 </div>
                 <div id="resume" className="section resume">
                     <h1>Resume</h1>
-                    <a href="https://mel4ni3.github.io/assets/Melanie_Resume.pdf">Click here to download resume.</a>
+                    <a href={`${process.env.PUBLIC_URL}/assets/Melanie_Resume.pdf`}>Click here to view resume.</a>
                 </div>
                 <div id="contact" className="section contact">
                     <h1>Contact</h1>
