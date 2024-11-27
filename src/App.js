@@ -1,65 +1,204 @@
-import React, { Component, useState} from "react";
+/*import React, { Component } from "react";
 import ReactDOM from "react-dom/client";
+import Particles from "react-tsparticles";
 import './App.css';
 import { SocialIcon } from 'react-social-icons';
 
 class App extends Component {
   render() {
-
     return (
-      <><div className="title">
-        <h1>Melanie Ehrlich</h1>
-      </div><div className="App">
-      <SocialIcon url="https://twitter.com/creamcakex"  target="_blank" rel="noopener noreferrer" style={{ margin: 20 }}/>
-      <SocialIcon url="https://github.com/mel4ni3"  target="_blank" rel="noopener noreferrer" style={{ margin: 20 }}/>
-      <SocialIcon url="https://instagram.com/melaniie.exe"  target="_blank" rel="noopener noreferrer" style={{ margin: 20 }}/>
-      <SocialIcon url="https://www.linkedin.com/in/melanie-ehrlich/"  target="_blank" rel="noopener noreferrer" style={{ margin: 20 }}/>
-    </div><div className="info">
+      <>
+        <div className="title">
+          <h1>Melanie Ehrlich</h1>
+        </div>
+        <div className="App">
+          <SocialIcon url="https://twitter.com/creamcakex" target="_blank" rel="noopener noreferrer" style={{ margin: 20 }} />
+          <SocialIcon url="https://github.com/mel4ni3" target="_blank" rel="noopener noreferrer" style={{ margin: 20 }} />
+          <SocialIcon url="https://instagram.com/melaniie.exe" target="_blank" rel="noopener noreferrer" style={{ margin: 20 }} />
+          <SocialIcon url="https://www.linkedin.com/in/melanie-ehrlich/" target="_blank" rel="noopener noreferrer" style={{ margin: 20 }} />
+        </div>
+        <div className="info">
           <p>Hi! I am Melanie Ehrlich, a Computer Science student
             at the University of Central Florida. Some of my interests
             include drawing, listening to music, and playing video games. Thanks
             for visiting my site!
           </p>
-        </div><div className="projects">
+        </div>
+        <div className="projects">
           <h1>Projects</h1>
           <p>My projects!</p>
-        </div><div className="resume">
-          <h1>Resume</h1>
-         <a href="https://mel4ni3.github.io/assets/Melanie_Resume.pdf">Click here to download resume.</a>
-        </div><div className="contact">
-          <h1>Contact</h1>
-         <p>Feel free to reach out to me via email at <a href="mailto:melanie6104@icloud.com">melanie6104@icloud.com,</a> or through <a href="https://www.linkedin.com/in/melanie-ehrlich/">LinkedIn.</a></p>
-        </div><div className="footer">
-         <p>&copy; Melanie Ehrlich</p>
-        </div></>
+        </div>
+        <div className="resume">
+        </div>
+      </>
     );
   }
 }
 
 export default App;
+*/
 
-/*import logo from './logo.svg';
+import React, { useCallback } from "react";
+import Particles from "react-tsparticles";
+import { loadSlim } from "tsparticles-slim";
 import './App.css';
+import { SocialIcon } from 'react-social-icons';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    const particlesInit = useCallback(async engine => {
+        console.log(engine);
+        await loadSlim(engine);
+    }, []);
 
-export default App;*/
+    const particlesLoaded = useCallback(async container => {
+        console.log(container);
+    }, []);
+
+    return (
+        <>
+            <Particles
+                id="tsparticles"
+                init={particlesInit}
+                loaded={particlesLoaded}
+                options={{
+                    particles: {
+                        number: {
+                            value: 80,
+                            density: {
+                                enable: true,
+                                value_area: 800
+                            }
+                        },
+                        color: {
+                            value: "#ffffff"
+                        },
+                        shape: {
+                            type: "circle",
+                            stroke: {
+                                width: 0,
+                                color: "#000000"
+                            },
+                            polygon: {
+                                nb_sides: 5
+                            }
+                        },
+                        opacity: {
+                            value: 0.5,
+                            random: false,
+                            anim: {
+                                enable: false,
+                                speed: 1,
+                                opacity_min: 0.1,
+                                sync: false
+                            }
+                        },
+                        size: {
+                            value: 3,
+                            random: true,
+                            anim: {
+                                enable: false,
+                                speed: 40,
+                                size_min: 0.1,
+                                sync: false
+                            }
+                        },
+                        line_linked: {
+                            enable: true,
+                            distance: 150,
+                            color: "#ffffff",
+                            opacity: 0.4,
+                            width: 1
+                        },
+                        move: {
+                            enable: true,
+                            speed: 6,
+                            direction: "none",
+                            random: false,
+                            straight: false,
+                            out_mode: "out",
+                            bounce: false,
+                            attract: {
+                                enable: false,
+                                rotateX: 600,
+                                rotateY: 1200
+                            }
+                        }
+                    },
+                    interactivity: {
+                        detect_on: "canvas",
+                        events: {
+                            onhover: {
+                                enable: true,
+                                mode: "repulse"
+                            },
+                            onclick: {
+                                enable: true,
+                                mode: "push"
+                            },
+                            resize: true
+                        },
+                        modes: {
+                            grab: {
+                                distance: 400,
+                                line_linked: {
+                                    opacity: 1
+                                }
+                            },
+                            bubble: {
+                                distance: 400,
+                                size: 40,
+                                duration: 2,
+                                opacity: 8,
+                                speed: 3
+                            },
+                            repulse: {
+                                distance: 200,
+                                duration: 0.4
+                            },
+                            push: {
+                                particles_nb: 4
+                            },
+                            remove: {
+                                particles_nb: 2
+                            }
+                        }
+                    },
+                    retina_detect: true
+                }}
+                style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                    zIndex: -1,
+                    background: "linear-gradient(to right, #ff7e5f, #feb47b)"
+                }}
+            />
+            <div className="title">
+                <h1>Melanie Ehrlich</h1>
+            </div>
+            <div className="App">
+                <SocialIcon url="https://twitter.com/creamcakex" target="_blank" rel="noopener noreferrer" style={{ margin: 20 }} />
+                <SocialIcon url="https://github.com/mel4ni3" target="_blank" rel="noopener noreferrer" style={{ margin: 20 }} />
+                <SocialIcon url="https://instagram.com/melaniie.exe" target="_blank" rel="noopener noreferrer" style={{ margin: 20 }} />
+                <SocialIcon url="https://www.linkedin.com/in/melanie-ehrlich/" target="_blank" rel="noopener noreferrer" style={{ margin: 20 }} />
+            </div>
+            <div className="info">
+                <p>Hi! I am Melanie Ehrlich, a Computer Science student
+                    at the University of Central Florida. Some of my interests
+                    include drawing, listening to music, and playing video games. Thanks
+                    for visiting my site!
+                </p>
+            </div>
+            <div className="projects">
+                <h1>Projects</h1>
+                <p>My projects!</p>
+            </div>
+            <div className="resume">
+            </div>
+        </>
+    );
+};
+
+export default App;
