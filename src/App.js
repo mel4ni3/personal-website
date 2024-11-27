@@ -151,7 +151,36 @@ const App = () => {
                 </div>
                 <div className="projects">
                     <h1>Projects</h1>
-                    <p>My projects!</p>
+                    <div className="project">
+                        <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+                            <img src="https://via.placeholder.com/300" alt="Project Thumbnail" />
+                        </a>
+                        <div className="project-description">
+                            <p>This is a description of the project. It explains what the project is about and its key features.</p>
+                        </div>
+                        <button className="project-button" onClick={() => window.open('https://example.com', '_blank')}>
+                            See Project
+                        </button>
+                    </div>
+                </div>
+                <div className="work-experience">
+                    <h1>Work Experience</h1>
+                    <div className="experience">
+                        <img src="https://via.placeholder.com/100" alt="Company Logo" />
+                        <div className="experience-content">
+                            <div className="company-name">Company Name</div>
+                            <div className="position">Position</div>
+                            <div className="dates-worked">Dates Worked</div>
+                            <div className="description">
+                                <p>This is a description of the work experience. It explains the role and key responsibilities.</p>
+                            </div>
+                            <div className="skills">
+                                <button className="skill-button">Skill 1</button>
+                                <button className="skill-button">Skill 2</button>
+                                <button className="skill-button">Skill 3</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div className="resume">
                     <h1>Resume</h1>
