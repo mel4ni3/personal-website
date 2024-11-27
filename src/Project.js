@@ -1,9 +1,12 @@
 import React from 'react';
 import './App.css';
 
-const Project = ({ url, imageUrl, description }) => {
+const Project = ({ url, name, imageUrl, description }) => {
     return (
         <div className="project">
+            <div className="project-name">
+                <h2>{name}</h2>
+            </div>
             <a href={url} target="_blank" rel="noopener noreferrer">
                 <img src={imageUrl} alt="Project Thumbnail" />
             </a>

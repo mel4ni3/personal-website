@@ -12,7 +12,7 @@ const WorkExperience = ({ logoUrl, companyName, position, datesWorked, descripti
                 <div className="description">
                     <p>{description}</p>
                 </div>
-                <div className="skills">
+                <div className="skillsWork">
                     {skills.map((skill, index) => (
                         <button key={index} className="skill-button">{skill}</button>
                     ))}

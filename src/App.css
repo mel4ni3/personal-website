@@ -150,10 +150,48 @@ body {
   margin-top: 10px;
 }
 
-.skills {
+.skillsWork {
   display: flex;
   flex-wrap: wrap;
   margin-top: 10px;
+}
+
+.skillsWork .skill-button {
+  padding: 5px 10px;
+  margin: 5px;
+  background-color: transparent;
+  color: #ff7e5f;
+  border: 2px solid #ff7e5f;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.skillsWork .skill-button:hover {
+  background-color: #ff7e5f;
+  color: white;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skills-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.skills-icons .fa-icon {
+  margin: 10px;
 }
 
 .skill-button {
@@ -169,4 +207,57 @@ body {
 
 .skill-button:hover {
   background-color: #feb47b;
+}
+
+.skills-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.skills-icons .fa-icon {
+  margin: 10px;
+}
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.top-bar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+
+.top-bar a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.section {
+  padding-top: 20px; /* Adjust this value to prevent content from being hidden behind the fixed top bar */
+}
+
+.title {
+  padding-top: 20px; /* Adjust this value to ensure the home section is fully visible */
+}
+
+.dev-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  display: block;
 }

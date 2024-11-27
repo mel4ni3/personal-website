@@ -3,6 +3,10 @@ import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 import './App.css';
 import { SocialIcon } from 'react-social-icons';
+import Project from './Project';
+import WorkExperience from './WorkExperience';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faReact, faJsSquare, faNodeJs, faHtml5, faCss3Alt, faPython } from '@fortawesome/free-brands-svg-icons';
 
 const App = () => {
     const particlesInit = useCallback(async engine => {
@@ -134,8 +138,19 @@ const App = () => {
                     zIndex: -1
                 }}
             />
+            <div className="top-bar">
+                <a href="#home">Home</a>
+                <a href="#projects">Projects</a>
+                <a href="#work-experience">Work Experience</a>
+                <a href="#resume">Resume</a>
+                <a href="#contact">Contact</a>
+                <a href="#skills">Skills</a>
+            </div>
             <div className="App">
-                <div className="title">
+                <br />
+                <br />
+                <br />
+                <div id="home" className="section title">
                     <h1>Melanie Ehrlich</h1>
                 </div>
                 <SocialIcon url="https://twitter.com/creamcakex" target="_blank" rel="noopener noreferrer" style={{ margin: 20 }} />
@@ -143,56 +158,56 @@ const App = () => {
                 <SocialIcon url="https://instagram.com/melaniie.exe" target="_blank" rel="noopener noreferrer" style={{ margin: 20 }} />
                 <SocialIcon url="https://www.linkedin.com/in/melanie-ehrlich/" target="_blank" rel="noopener noreferrer" style={{ margin: 20 }} />
                 <div className="info">
+                    <img src="https://via.placeholder.com/150" alt="Developer" className="dev-image" />
                     <p>Hi! I am Melanie Ehrlich, a Computer Science student
                         at the University of Central Florida. Some of my interests
                         include drawing, listening to music, and playing video games. Thanks
                         for visiting my site!
                     </p>
                 </div>
-                <div className="projects">
+                <div id="projects" className="section projects">
                     <h1>Projects</h1>
-                    <div className="project">
-                        <a href="https://example.com" target="_blank" rel="noopener noreferrer">
-                            <img src="https://via.placeholder.com/300" alt="Project Thumbnail" />
-                        </a>
-                        <div className="project-description">
-                            <p>This is a description of the project. It explains what the project is about and its key features.</p>
-                        </div>
-                        <button className="project-button" onClick={() => window.open('https://example.com', '_blank')}>
-                            See Project
-                        </button>
-                    </div>
+                    <Project
+                        name="Project 1"
+                        url="https://example.com"
+                        imageUrl="https://via.placeholder.com/300"
+                        description="This is a description of the project. It explains what the project is about and its key features."
+                    />
                 </div>
-                <div className="work-experience">
+                <div id="work-experience" className="section work-experience">
                     <h1>Work Experience</h1>
-                    <div className="experience">
-                        <img src="https://via.placeholder.com/100" alt="Company Logo" />
-                        <div className="experience-content">
-                            <div className="company-name">Company Name</div>
-                            <div className="position">Position</div>
-                            <div className="dates-worked">Dates Worked</div>
-                            <div className="description">
-                                <p>This is a description of the work experience. It explains the role and key responsibilities.</p>
-                            </div>
-                            <div className="skills">
-                                <button className="skill-button">Skill 1</button>
-                                <button className="skill-button">Skill 2</button>
-                                <button className="skill-button">Skill 3</button>
-                            </div>
-                        </div>
-                    </div>
+                    <WorkExperience
+                        logoUrl="https://via.placeholder.com/100"
+                        companyName="Company Name"
+                        position="Position"
+                        datesWorked="Dates Worked"
+                        description="This is a description of the work experience. It explains the role and key responsibilities."
+                        skills={["Skill 1", "Skill 2", "Skill 3"]}
+                    />
                 </div>
-                <div className="resume">
+                <div id="resume" className="section resume">
                     <h1>Resume</h1>
                     <a href="https://mel4ni3.github.io/assets/Melanie_Resume.pdf">Click here to download resume.</a>
                 </div>
-                <div className="contact">
+                <div id="contact" className="section contact">
                     <h1>Contact</h1>
                     <p>Feel free to reach out to me via email at <a href="mailto:melanie6104@icloud.com">melanie6104@icloud.com</a>, or through <a href="https://www.linkedin.com/in/melanie-ehrlich/">LinkedIn</a>.</p>
+                </div>
+                <div id="skills" className="section skills">
+                    <h1>Skills</h1>
+                    <div className="skills-icons">
+                        <FontAwesomeIcon icon={faReact} size="3x" style={{ margin: '10px' }} />
+                        <FontAwesomeIcon icon={faJsSquare} size="3x" style={{ margin: '10px' }} />
+                        <FontAwesomeIcon icon={faNodeJs} size="3x" style={{ margin: '10px' }} />
+                        <FontAwesomeIcon icon={faHtml5} size="3x" style={{ margin: '10px' }} />
+                        <FontAwesomeIcon icon={faCss3Alt} size="3x" style={{ margin: '10px' }} />
+                        <FontAwesomeIcon icon={faPython} size="3x" style={{ margin: '10px' }} />
+                    </div>
                 </div>
                 <div className="footer">
                     <p>&copy; Melanie Ehrlich</p>
                 </div>
+                <br />
             </div>
         </>
     );
