@@ -158,6 +158,7 @@ const App = () => {
                 <a href="#projects">Projects</a>
                 <a href="#work-experience">Work Experience</a>
                 <a href="#education">Education</a>
+                <a href="#other">Other Experience</a>
                 <a href="#resume">Resume</a>
                 <a href="#contact">Contact</a>
                 <a href="#skills">Skills</a>
@@ -223,12 +224,28 @@ const App = () => {
                 <div id="work-experience" className="section work-experience">
                     <h1>Work Experience</h1>
                     <WorkExperience
-                        logoUrl="https://via.placeholder.com/100"
-                        companyName="Company Name"
-                        position="Position"
-                        datesWorked="Dates Worked"
-                        description="This is a description of the work experience. It explains the role and key responsibilities."
-                        skills={["Skill 1", "Skill 2", "Skill 3"]}
+                        logoUrl={`${process.env.PUBLIC_URL}/assets/1680616530656.jpeg`}
+                        companyName="JM Family Enterprises"
+                        position="Software Engineer"
+                        datesWorked="Aug 2024 - Present"
+                        description="Software Engineer under the OCTO (Office of the CTO) department."
+                        skills={["C#", "ASP.NET", "Azure"]}
+                    />
+                     <WorkExperience
+                        logoUrl={`${process.env.PUBLIC_URL}/assets/microsoft_logo.jpeg`}
+                        companyName="Microsoft"
+                        position="Software Engineer Intern"
+                        datesWorked="May 2023 - Aug 2023"
+                        description="Software Engineer Intern in Intune, worked on iOS App Provisioning profiles and Windows Sidecar logs."
+                        skills={["C#", "React", "JavaScript"]}
+                    />
+                     <WorkExperience
+                        logoUrl={`${process.env.PUBLIC_URL}/assets/images (1).png`}
+                        companyName="General Dynamics"
+                        position="Software Engineer Intern"
+                        datesWorked="Feb 2022 - Feb 2023"
+                        description="Software Engineer Intern working on laser detection software."
+                        skills={["C++", "C#"]}
                     />
                 </div>
                 <div id="education" className="section education">
@@ -256,6 +273,41 @@ const App = () => {
                         datesStudied="Aug 2016 - May 2020"
                         activities="Spanish Honor Society, Park Vista Marching Band, Strategic Games Club"
                         skills={[]}
+                    />
+                </div>
+                <div id="other" className="section education">
+                    <h1>Other Experience</h1>
+                    <Education 
+                        logoUrl={`${process.env.PUBLIC_URL}/assets/khlogo.png`}
+                        schoolName="Knight Hacks"
+                        degree="Communications Director"
+                        datesStudied="Nov 2020 - Feb 2022"
+                        activities="Managed the communications team and made Discord announcements, graphics, social media posts, and email newsletters."
+                        skills={['Discord', 'Social Media', 'Graphic Design', 'Canva', 'Mailchimp']}
+                    />
+                    <Education 
+                        logoUrl={`${process.env.PUBLIC_URL}/assets/ucfacmw.jpg`}
+                        schoolName="UCF Association for Computing Machinery"
+                        degree="Marketing Director"
+                        datesStudied="May 2021 - Sep 2022"
+                        activities="Made graphics and social media posts for events."
+                        skills={['Graphic Design', 'Canva', 'Social Media']}
+                    />
+                     <Education 
+                        logoUrl={`${process.env.PUBLIC_URL}/assets/socio_technical_interaction_research_lab_logo.jpeg`}
+                        schoolName="Socio-Technical Interaction Research Lab"
+                        degree="Undergraduate Research Assistant"
+                        datesStudied="May 2021 - Dec 2021"
+                        activities="Completed risk annotations on participant data for the Instagram Data Donation project, to be used in a machine learning model."
+                        skills={["AWS", "MySQL", "Data Annotation"]}
+                    />
+                    <Education 
+                        logoUrl={`${process.env.PUBLIC_URL}/assets/wikiknightslogo.jpg`}
+                        schoolName="WikiKnights"
+                        degree="Server Moderator"
+                        datesStudied="Jan 2021 - Dec 2021"
+                        activities="Made graphics and collaborated with other officers on club events and a campaign to stop opt-out of textbook purchases."
+                        skills={["Discord", "Graphic Design", "Canva", "Social Media"]}
                     />
                 </div>
                 <div id="resume" className="section resume">

@@ -424,6 +424,7 @@ body {
 
 .info p {
   margin: 0;
+  padding: 10px;
 }
 
 /* Media queries for responsiveness */
