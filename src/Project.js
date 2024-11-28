@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-const Project = ({ url, name, imageUrl, description }) => {
+const Project = ({ url, name, imageUrl, description, children }) => {
     return (
         <div className="project">
             <div className="project-name">
@@ -12,6 +12,7 @@ const Project = ({ url, name, imageUrl, description }) => {
             </a>
             <div className="project-description">
                 <p>{description}</p>
+                {children}
             </div>
             <button className="project-button" onClick={() => window.open(url, '_blank')}>
                 See Project

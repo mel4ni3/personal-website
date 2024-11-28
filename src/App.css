@@ -105,6 +105,21 @@ body {
   background-color: #feb47b;
 }
 
+.show-more-button {
+  padding: 10px 20px;
+  background-color: #ff7e5f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.show-more-button:hover {
+  background-color: #feb47b;
+}
+
 .work-experience {
   display: flex;
   flex-direction: column;
