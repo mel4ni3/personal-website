@@ -30,6 +30,13 @@ const App = () => {
         setShowMore(!showMore);
     };
 
+    const scrollToSection = (id) => {
+        const section = document.getElementById(id);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <>
             <Particles
@@ -154,27 +161,42 @@ const App = () => {
                 &#9776;
             </div>
             <div className={`top-bar ${menuOpen ? 'vertical' : ''}`}>
-                <a href="#home">Home</a>
-                <a href="#projects">Projects</a>
-                <a href="#work-experience">Work Experience</a>
-                <a href="#education">Education</a>
-                <a href="#other">Other Experience</a>
-                <a href="#resume">Resume</a>
-                <a href="#contact">Contact</a>
-                <a href="#skills">Skills</a>
+                <a href="#home" class="handlee-regular">Home</a>
+                <a href="#projects" class="handlee-regular">Projects</a>
+                <a href="#work-experience" class="handlee-regular">Work Experience</a>
+                <a href="#education" class="handlee-regular">Education</a>
+                <a href="#other" class="handlee-regular">Other Experience</a>
+                <a href="#resume" class="handlee-regular">Resume</a>
+                <a href="#contact" class="handlee-regular">Contact</a>
+                <a href="#skills" class="handlee-regular">Skills</a>
             </div>
             <div className="App">
                 <br />
                 <br />
                 <br />
-                <div id="home" className="section title">
-                    <h1>Melanie Ehrlich</h1>
-                </div>
+                <div id="home" className="title">
+                <div className="title-container">
+                        <h1 class="hachi-maru-pop-regular">Melanie Ehrlich</h1>
+                        <h2>Software Engineer</h2>
+                        <div id="social-icons">
+                   
+                    
                 <SocialIcon url="https://twitter.com/creamcakex" target="_blank" rel="noopener noreferrer" style={{ margin: 20 }} />
                 <SocialIcon url="https://github.com/mel4ni3" target="_blank" rel="noopener noreferrer" style={{ margin: 20 }} />
                 <SocialIcon url="https://instagram.com/melaniie.exe" target="_blank" rel="noopener noreferrer" style={{ margin: 20 }} />
                 <SocialIcon url="https://www.linkedin.com/in/melanie-ehrlich/" target="_blank" rel="noopener noreferrer" style={{ margin: 20 }} />
-                <div className="info">
+                </div>
+                    </div>
+                    <div className="arrow" onClick={() => scrollToSection('spacer')}>
+                        &#x2193;
+                    </div>
+                </div>
+             
+              <div id="spacer">
+                
+                <br />
+              </div>
+                <div className="info" id="info">
                     <img src={`${process.env.PUBLIC_URL}/assets/photo_2024-04-14_22-28-21.jpg`} alt="Developer" className="dev-image" />
                     <p>Hi! I am Melanie Ehrlich, a Computer Science graduate
                         from the University of Central Florida. I study Master of Science in Business Analytics

@@ -3,21 +3,34 @@ body, html {
   padding: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  background: linear-gradient(to right, #c396eb, #a874d5);
 }
 
-.title, .info, .projects, .resume, .contact, .footer {
+.info, .projects, .resume, .contact, .footer {
   position: relative;
   z-index: 1;
   text-align: center;
   padding: 20px;
-  margin: 20px;
-  background-color: rgba(255, 255, 255, 0.8); /* Optional: to make the content stand out */
+  margin: 50px;
+  background-color: rgba(255, 255, 255, 0.5); /* Optional: to make the content stand out */
   border-radius: 10px; /* Optional: to add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: to add a shadow */
 }
 
 body {
-  background-color: lightblue;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #2e2b5f; /* Dark purple background */
+  color: black;
+}
+
+a {
+  color: #706abe; /* Light purple link color */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #a29bfe; /* Lighter color on hover */
 }
 
 .App {
@@ -61,13 +74,31 @@ body {
   }
 }
 
+.bonbon-regular {
+  font-family: "Bonbon", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hachi-maru-pop-regular {
+  font-family: "Hachi Maru Pop", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.handlee-regular {
+  font-family: "Handlee", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .project {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 20px;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
@@ -93,7 +124,7 @@ body {
 
 .project-button {
   padding: 10px 20px;
-  background-color: #ff7e5f;
+  background-color: #a16ac8;
   color: white;
   border: none;
   border-radius: 5px;
@@ -102,12 +133,12 @@ body {
 }
 
 .project-button:hover {
-  background-color: #feb47b;
+  background-color: #be8cd7;
 }
 
 .show-more-button {
   padding: 10px 20px;
-  background-color: #ff7e5f;
+  background-color: #a16ac8; /* Light purple background */
   color: white;
   border: none;
   border-radius: 5px;
@@ -117,16 +148,16 @@ body {
 }
 
 .show-more-button:hover {
-  background-color: #feb47b;
+  background-color: #be8cd7; /* Lighter color on hover */
 }
 
 .work-experience {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px;
+  margin: 50px;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -175,15 +206,15 @@ body {
   padding: 5px 10px;
   margin: 5px;
   background-color: transparent;
-  color: #ff7e5f;
-  border: 2px solid #ff7e5f;
+  color: #a16ac8;
+  border: 2px solid #a16ac8;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .skillsWork .skill-button:hover {
-  background-color: #ff7e5f;
+  background-color: #a16ac8;
   color: white;
 }
 
@@ -191,9 +222,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px;
+  margin: 50px;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -209,40 +240,6 @@ body {
 .skills-icons .devicon-icon {
   margin: 10px;
   position: relative;
-}
-
-.skills-icons .fa-icon:hover::after,
-.skills-icons .devicon-icon:hover::after {
-  content: attr(data-tooltip);
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  white-space: nowrap;
-  z-index: 10;
-  opacity: 1;
-  transition: opacity 0.3s;
-}
-
-.skills-icons .fa-icon::after,
-.skills-icons .devicon-icon::after {
-  content: attr(data-tooltip);
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  white-space: nowrap;
-  z-index: 10;
-  opacity: 0;
-  transition: opacity 0.3s;
 }
 
 .skills-icons .fa-icon:hover::after,
@@ -337,9 +334,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px;
+  margin: 50px;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -349,17 +346,18 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: black;
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 10px 0;
   z-index: 1000;
+  backdrop-filter: blur(5px);
 }
 
 .top-bar a {
-  color: white;
+  color: black;
   text-decoration: none;
   padding: 10px 20px;
   transition: background-color 0.3s;
@@ -396,35 +394,81 @@ body {
 }
 
 .title {
-  padding-top: 20px; /* Adjust this value to ensure the home section is fully visible */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #6c5ce7; /* Purple background */
+  height: 100vh; /* Full height of the viewport */
+  color: white; /* Text color */
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid #ffffff; /* Cursor effect */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  /* pause between rounds of the animation */
+  animation-delay: 1s;
+}
+
+.title-container {
+  display: inline-block; /* Make the container fit the content */
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #ffffff; }
+}
+
+.arrow {
+  margin-top: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
 }
 
 .dev-image {
-  /*width: 150px;
-  height: 150px;*/
-  /* make the width and height have same prorpriotion as the image */
-  width: 20%;
-  height: auto;
-  /*border-radius: 50%;*/
+  width: 250px;
+  height: 250px;
+  border-radius: 10%;
   border: 5px solid white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin: 20px auto;
-  display: block;
+  margin-right: 20px;
 }
 
 .info {
   display: flex;
   align-items: center;
-  margin: 20px;
+  margin: 50px;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .info p {
   margin: 0;
-  padding: 10px;
+  padding: 20px;
 }
 
 /* Media queries for responsiveness */
@@ -447,6 +491,7 @@ body {
   }
 
   .dev-image {
+    margin-right: 0;
     margin-bottom: 20px;
   }
 }
@@ -458,4 +503,34 @@ body {
 /* if you want to change the original color */
 .devicon-devicon-plain path {
   fill: black;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  height: 100vh; /* Full height of the viewport */
+  color: white; /* Text color */
+  text-align: center;
+}
+
+.arrow {
+  margin-top: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
 }
