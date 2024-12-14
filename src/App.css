@@ -494,6 +494,22 @@ a:hover {
     margin-right: 0;
     margin-bottom: 20px;
   }
+
+  .title h1 {
+    font-size: 2rem;
+  }
+
+  .work-experience .dates-worked {
+    text-align: left; /* Left align dates worked on mobile devices */
+  }
+
+  .work-experience .dates-worked {
+    text-align: left; /* Left align dates worked on mobile devices */
+  }
+
+  .dates-worked {
+    text-align: left; /* Left align dates worked on mobile devices */
+  }
 }
 
 .devicon-devicon-plain {
