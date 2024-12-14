@@ -493,6 +493,8 @@ a:hover {
   .dev-image {
     margin-right: 0;
     margin-bottom: 20px;
+    width: 50%;
+    height: auto;
   }
 
   .title h1 {
@@ -510,6 +512,22 @@ a:hover {
   .dates-worked {
     text-align: left; /* Left align dates worked on mobile devices */
   }
+
+  .work-experience img {
+    width: 50px;
+    height: auto;
+  }
+
+  .education img {
+    width: 50px;
+    height: auto;
+  }
+
+  .other-experience img {
+    width: 50px;
+    height: auto;
+  }
+  
 }
 
 .devicon-devicon-plain {
