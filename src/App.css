@@ -576,3 +576,47 @@ a:hover {
     transform: translateY(-5px);
   }
 }
+
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the project cards horizontally */
+  gap: 10px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  flex: 1 1 33%; /* Make the width of the project cards be 33% of the parent container */
+  box-sizing: border-box;
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  width: 30%;
+}
+
+.project-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .project {
+    flex: 1 1 100%; /* One card per row on smaller screens */
+  }
+}

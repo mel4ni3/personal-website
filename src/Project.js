@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import './Project.css';
 
 const Project = ({ url, name, imageUrl, description, children }) => {
     return (

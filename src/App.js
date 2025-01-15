@@ -205,44 +205,50 @@ const App = () => {
                         for visiting my site!
                     </p>
                 </div>
-                <div id="projects" className="section projects">
-                    <h1>Projects</h1>
-                    <Project
-                        name="KnightAssist"
-                        url="https://github.com/KnightAssistUCF/KnightAssist-Mobile-App"
-                        imageUrl={`${process.env.PUBLIC_URL}/assets/KnightAssistCoA3.png`}
-                        description="A full-stack website and mobile application that allows students to sign up for volunteering shifts and record their hours. Organizations can publish volunteering events and administrators can modify all data. Worked primarily on the mobile application. This was my UCF Senior Design project."
-                    />
-                    <Project
-                        name="Budgie"
-                        url="https://github.com/tanndlin/budgie"
-                        imageUrl={`${process.env.PUBLIC_URL}/assets/logo.png`}
-                        description="A full-stack web and mobile application for tracking expenses. Large project for UCF COP 4331C Processes of Object-Oriented Software Development course. Worked on the backend APIs in Express."
-                    />
-                    {showMore && (
-                        <>
-                            <Project
-                                name="Face Detection in Python"
-                                url="https://github.com/mel4ni3/python-facedetection"
-                                imageUrl={`${process.env.PUBLIC_URL}/assets/img_screenshot_27.11.2024.png`}
-                                description="A Python project in OpenCV that detects faces in real time image capture. Uses Haar Cascades to detect faces as well as eyes."
-                            />
-                            <Project
-                                name="R Analysis on Per Capita Income"
-                                url={`${process.env.PUBLIC_URL}/assets/Investigative Assignment 2_ Trends of Three Countries DRAFT.pdf`}
-                                imageUrl={`${process.env.PUBLIC_URL}/assets/R project.png`}
-                                description={
-                                    <>
-                                    A paper written from R analysis on the per capita income of the United States, Dominican Republic, and Vietnam, using data from the <a href="https://databank.worldbank.org/source/world-development-indicators#" target="_blank" rel="noopener noreferrer">World Bank</a>.
-                                    </>
-                                }
-                            />
-                        </>
-                    )}
-                    <button onClick={toggleShowMore} className="show-more-button">
-                        {showMore ? "Hide" : "Show More"}
-                    </button>
-                </div>
+                
+                <div className="section projects">
+                <h1>Projects</h1>
+  <div id="projects">
+  <Project
+    name="KnightAssist"
+    url="https://github.com/KnightAssistUCF/KnightAssist-Mobile-App"
+    imageUrl={`${process.env.PUBLIC_URL}/assets/KnightAssistCoA3.png`}
+    description="A full-stack website and mobile application that allows students to sign up for volunteering shifts and record their hours. Organizations can publish volunteering events and administrators can modify all data. Worked primarily on the mobile application. This was my UCF Senior Design project."
+  />
+  <Project
+    name="Budgie"
+    url="https://github.com/tanndlin/budgie"
+    imageUrl={`${process.env.PUBLIC_URL}/assets/logo.png`}
+    description="A full-stack web and mobile application for tracking expenses. Large project for UCF COP 4331C Processes of Object-Oriented Software Development course. Worked on the backend APIs in Express."
+  />
+  {showMore && (
+    <>
+      <Project
+        name="Face Detection in Python"
+        url="https://github.com/mel4ni3/python-facedetection"
+        imageUrl={`${process.env.PUBLIC_URL}/assets/img_screenshot_27.11.2024.png`}
+        description="A Python project in OpenCV that detects faces in real time image capture. Uses Haar Cascades to detect faces as well as eyes."
+      />
+      <Project
+        name="R Analysis on Per Capita Income"
+        url={`${process.env.PUBLIC_URL}/assets/Investigative Assignment 2_ Trends of Three Countries DRAFT.pdf`}
+        imageUrl={`${process.env.PUBLIC_URL}/assets/R project.png`}
+        description={
+          <>
+            A paper written from R analysis on the per capita income of the United States, Dominican Republic, and Vietnam, using data from the <a href="https://databank.worldbank.org/source/world-development-indicators#" target="_blank" rel="noopener noreferrer">World Bank</a>.
+          </>
+        }
+      />
+      
+    </>
+  )}
+  </div>
+   <button onClick={toggleShowMore} className="show-more-button">
+    {showMore ? "Hide" : "Show More"}
+  </button>
+  </div>
+ 
+
                 <div id="work-experience" className="section work-experience">
                     <h1>Work Experience</h1>
                     <WorkExperience
